@@ -1,0 +1,38 @@
+---
+import Navigation from '../components/Navigation.astro'
+interface Props {
+  title: string
+}
+
+const { title = 'Astro default' } = Astro.props as Props
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator}/>
+    <title>{title}</title>
+  </head>
+  <body>
+    <div>
+      <Navigation/>
+      <slot />
+    </div>
+  </body>
+</html>
+
+<style>
+  *{
+    box-sizing: border-box;
+  }
+
+  body{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    max-width: 100%;
+  }
+</style>

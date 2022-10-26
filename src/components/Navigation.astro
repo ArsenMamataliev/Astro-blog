@@ -1,0 +1,71 @@
+---
+const links = [
+  { url: '/', title: 'Home' },
+  { url: '/about', title: 'About' },
+  { url: '/contacts', title: 'Contacts' },
+]
+---
+
+<nav>
+  <p><a href="/">Astro Blog</a></p>
+  <ul>
+    {
+      links.map((link) => (
+        <li>
+          <a href={link.url}>{link.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<style>
+  nav{
+    background: #000;
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+    padding: 0 30px;
+    justify-content: space-between;
+    max-width: 100%;
+    }
+
+    p a{
+      color: rgb(255, 211, 14);
+      font-size: 30px;
+      text-decoration: none;
+    }
+
+    ul{
+      display: flex;
+      gap: 20px;
+      padding: 10px;
+    }
+
+    li{
+      text-decoration: none;
+      list-style-type: none;
+    }
+
+    li a {
+      font-size: 20px;
+      color: aliceblue;
+      transition: color 1s ease;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      color: rgb(168, 166, 166);
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 480px) {
+      nav{
+        padding: 0 10px;
+      }
+
+      p a{
+      font-size: 25px;
+      }
+    }
+</style>
