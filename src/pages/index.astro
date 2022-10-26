@@ -18,14 +18,10 @@ const posts = (await response.json()) as Posts[]
 
 
 <style>
-    @media screen and (min-width: 480px) {
+    @media screen and (max-width: 480px) {
         div{
         margin: 0 auto;
-        width: 90%;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
+        width: 100%;
         }
     }
     

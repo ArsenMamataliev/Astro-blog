@@ -1,3 +1,9 @@
 .container{
     border: 1px solid rgb(140, 141, 146);
 }
+
+@media screen and (max-width: 480px) {
+    .container{
+        border-bottom: 2px solid rgb(140, 141, 146);
+    }
+}
